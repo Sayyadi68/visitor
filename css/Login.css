@@ -1,0 +1,58 @@
+.login-container{
+    direction: rtl;
+    max-width: 300px;
+    min-width: 10%;
+    height: auto;
+    position: relative;
+    margin: 50px auto ;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.2rem;
+    border:  var(--border-color) solid 1px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.fa-regular{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    color: white;
+    font-size: var(--font-size);
+    background: var(--navbar-backgraund-theme-color);
+    position: relative;
+    padding-top: 25px;
+}
+.email-container , .password-container , .show-password-container{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 10px;
+}
+
+.show-pass{
+    position: absolute;
+    left: 36px;
+    margin-top: 42px;
+}
+#show-password{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+label{
+    color: var(--color-FFFFFF);
+}
+
+.fa-sharp{
+    color: var(--color-black);
+    font-size: 16px;
+}
+
+
+#ITEMS-SHOW,#ITEMS-SHOW2{
+    display: none;
+}

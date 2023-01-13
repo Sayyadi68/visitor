@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl"  data="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/SHI_LERA GROP.png" />
+    <title>visiting</title>
+</head>
+
+<body>
+    <button class="Effect"></button>
+    <button type="button" class="close-menu" id="menuClose"></button>
+    <header >
+        <nav class="navbar d-flex align-items-center">
+            <div id="rightNav" class="navbar-container">
+                <i class="fa-solid fa-bars me-3" id="addMenu"></i>
+                <span class="mx-3">سفارش</span>
+            </div>
+            <div class="navbar-container">
+                <img src="img/SHI_LERA GROP.png" alt="LOGO">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="header-bottom">
+            <section class="formColor mt-1">
+                <div id="btns" class="row mx-1 align-item-center d-flex flex-row justify-content-evenly">
+                    <button class="btn btn-darkcyan m-1 wh" onclick="showProduct()" type="button">محصولات</button>
+                    <button id="deleteAllBtn" class="btn btn-danger m-1 wh" onclick="deleteall()" type="button">حذف همه</button>
+                </div>
+            </section>
+            <section class="formColor mt-1">
+                <div class="row">
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 my-2 p-1 text-center">
+                        <div class="col">
+                            شركت پخش بهداشت سلامت عزیزی
+                        </div>
+                    </div>
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 my-2 p-1 text-center">
+                        <div>
+                            فاكس : 88853381
+                        </div>
+                    </div>
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 my-2 p-1 text-center">
+                        <div>
+                            شناسه ملی : 14015522333
+                        </div>
+                    </div>
+                    <div
+                        class="p-1 d-flex align-items-center justify-content-center col-6 col-md-3 bg-light my-2 p-1 text-center">
+                        <div>
+                            شناسه اقتصادی : 358742665
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container-fluid mt-1 formColor">
+                <div class="row">
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="person-name" placeholder="نام مرکز" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-code" placeholder="کد مشتری" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-number"
+                            placeholder="شماره اقتصادی" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-post" placeholder="کدپستی" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-national"
+                            placeholder="شماره ثبت/ملی" />
+                    </div>
+                    <div class="col-4">
+                        <input class="input my-2 text-center" type="text" id="buyer-phone" placeholder="تلفن" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input class="input my-2 text-center" type="text" id="address" placeholder="نشانی" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-12">
+                        <select class="input my-2" aria-label="Default select example">
+                            <option disabled selected>نوع فاكتور فروش</option>
+                            <option value="1">پيش فاكتور</option>
+                            <option value="2">رسمی</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                        <select class="input my-2" aria-label="Default select example">
+                            <option disabled selected>شرح وضعیت</option>
+                            <option value="1">فروش</option>
+                            <option value="2">بازگشتی</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                        <select class="input my-2" aria-label="Default select example">
+                            <option disabled selected>نوع فروش</option>
+                            <option value="1">ضایعات</option>
+                            <option value="2">عادی</option>
+                            <option value="3">امانی</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <section>
+            <div class="container-fluid table-responsive d-flex flex-column mt-2 p-0 rounded formColor">
+                <table id="visitor-table"
+                    class="table table-bordered border-dark table-striped align-middle text-center">
+                    <thead class="align-middle">
+                        <tr>
+                            <th scope="col">ردیف</th>
+                            <th scope="col">نام کالا</th>
+                            <th scope="col">شرح کالا</th>
+                            <th scope="col">تعداد</th>
+                            <th scope="col">مبلغ واحد</th>
+                            <th scope="col">مبلغ کل</th>
+                            <th scope="col">نام هدیه</th>
+                            <th scope="col">تعداد هدیه</th>
+                            <th scope="col"> تخفیف</th>
+                            <th scope="col">مبلغ کل با تخفیف</th>
+                            <th scope="col">مبلغ کل با مالیات</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="rtl formColor">
+            <div class="d-flex flex-column align-items-center">
+                <div id="sumBox" class="d-flex flex-column w-100 rounded bg-sumBox mt-3 formColor">
+                    <div id="sumOfProduct" class="d-flex flex-row justify-content-between mt-1 fs-6 fw-bolder"
+                        style="color:green;">
+                        <i class="p-1 m-2">جمع كل</i><i id="sumProduct" class="p-1 m-2">0</i>
+                    </div>
+                    <div id="sumOfDiscount" class="d-flex flex-row justify-content-between mt-1 fs-6 fw-bolder "
+                        style="color:red;">
+                        <i class="p-1 m-2">جمع كل تخفيفات</i><i id="sumDiscount" class="p-1 m-2">0</i>
+                    </div>
+                    <div id="sumOfTotal" class="d-flex flex-row justify-content-between mt-1 fs-6 fw-bolder">
+                        <i class="p-1 m-2">خالص پرداختی</i><i id="payClean" class="p-1 m-2">0</i>
+                    </div>
+                </div>
+                <div id="btnBox" class="h-100 d-flex flex-row align-items-center w-100 m-4">
+                    <button id="description" class="Enter btn-darkcyan w-100 m-3" type="button"  data-bs-toggle="modal" data-bs-target="#explain">شرح فاکتور</button>
+                    <button id="pay" class="Enter btn-darkcyan w-100 m-3">پرداخت</button>
+                    <button id="excel" class="Enter btn-darkcyan w-100 m-3">دانلود فایل</button>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="explain" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered" >
+                <div class="modal-content" >
+                    <div class="modal-header " style="background: var(--navbar-backgraund-theme-color);">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: var(--color-FFFFFF);">توضیحات خود را وارد کنید</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background: var(--navbar-backgraund-theme-color);">
+                        <textarea name="" id="" cols="30" rows="10" style="width: 100%;"></textarea>
+                    </div>
+                    <div class="modal-footer" style="background: var(--navbar-backgraund-theme-color);">
+                        <button type="button" class="Enter" style="margin: auto; position: relative; top: -10px;">ثبت</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="productbox d-flex flex-column bg-darkcyan shopBoxColor scroll">
+            <!-- selectbox -->
+            <select class="form-select position" aria-label="Default select example">
+                <option value="1" selected>سرنگ</option>
+                <option value="2">ارایشی بهداشتی</option>
+                <option value="3">دارویی</option>
+            </select>
+            <!-- card product -->
+            <div id="cart1">
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5">سرنگ لوئر لاک (سه تکه)</h4>
+                <div id="card-1" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سرنگ لوئر اسلیپ (سه تکه) </h4>
+                <div id="card-2" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سرنگ انسولین (یکپارچه) </h4>
+                <div id="card-3" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سر سوزن پزشکی </h4>
+                <div id="card-4" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سر سوزن پن انسولین </h4>
+                <div id="card-5" class="row flex-nowrap scroll my-1"></div>
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5"> سایر اقلام </h4>
+                <div id="card-6" class="row flex-nowrap scroll my-1"></div>
+            </div>
+            <div id="cart2">
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5">آرایشی بهداشتی</h4>
+                <div id="card-7" class="row flex-nowrap scroll"></div>
+            </div>
+            <div id="cart3">
+                <h4 class="card-title text-white ms-3 mt-3 mb-1 fw-normal fs-5">دارویی</h4>
+                <div id="card-8" class="row flex-nowrap scroll"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="hamburger-menu ltr" id="menu">
+        <div class="rtl">
+            <div class="line-flex justify-content-around p-3">
+                <img src="img/SHI_LERA GROP.png" alt="user-img" style="border-radius: 50%;" width="40px" height="40px">
+                <span style="color: #FFFFFF">مهدی صیادی</span>
+            </div>
+
+            <div class="items" id="ITEMS-CONTAINER3" style=" border-bottom:solid gray 1px;">
+                <div class="line-flex">
+                    <div>شرکت ها</div><i class="fa-solid fa-chevron-left rorate3"id="rotate3"></i>
+                </div>
+
+                <div class="DropDownMenu DropDownMenu-close3 " id="ITEMS-SHOW3">
+
+                    <a href="./visitor-panel.html">
+                        <li class="selling-item">عزیزی</li>
+                    </a>
+                    
+                    <a href="#">
+                        <li class="selling-item">کلاتوس</li>
+                    </a>
+                    <a href="#">
+                        <li class="selling-item">آرییانا</li>
+                    </a>
+
+                    <a href="#">
+                        <li class="selling-item">شیلرا</li>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <ul class="rtl">
+            <a href="./visitor-panel.html">
+                <li><i class="fa-solid fa-home"></i>پنل کاربری</li>
+            </a>
+            <a href="./add-compani.html">
+                <li><i class="fa-solid fa-plus"></i>افزودن فروشگاه</li>
+            </a>
+            <a href="./compani-visits.html">
+                <li><i class="fa-solid fa-list-check"></i>ویزیت ها</li>
+            </a>
+
+            
+            <div class="items " id="ITEMS-CONTAINER">
+                <div class="line-flex">
+                    <div><i class="fa-solid fa-box rtl"></i>کالاها</div><i class="fa-solid fa-chevron-left rorate" id="rotate"></i>
+                </div>
+                <div class="DropDownMenu DropDownMenu-close " id="ITEMS-SHOW">
+                    <a href="./create-basket.html">
+                        <li class="selling-item"><i class="fa-solid fa-basket-shopping"></i>سبد</li>
+                    </a>
+                    <a href="./add-item.html">
+                        <li class="selling-item"><i class="fa-solid fa-plus-square"></i>کالا</li>
+                    </a>
+                    <a href="anbar">
+                        <li class="selling-item"><i class="fa-solid fa-list-check"></i>انبار</li>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="items" id="ITEMS-CONTAINER2">
+                <div class="line-flex">
+                    <div><i class="fa-solid fa-user rtl"></i>کارکنان</div><i class="fa-solid fa-chevron-left rorate2" id="rotate2"></i>
+                </div>
+                <div class="DropDownMenu DropDownMenu-close2 " id="ITEMS-SHOW2">
+                    <a href="sell-admin">
+                        <li class="selling-item"><i class="fa-solid fa-user-circle"></i>سرپرست فروش</li>
+                    </a>
+                    <a href="visit">
+                        <li class="selling-item"><i class="fa-solid fa-user-circle"></i>ویزیتور</li>
+                    </a>
+                    <a href="tahsildar">
+                        <li class="selling-item"><i class="fa-solid fa-user-circle"></i>تحصیلدار</li>
+                    </a>
+                </div>
+            </div>
+
+            <a href="./namayandegi.html">
+                <li><i class="fa-solid fa-home-user"></i>نمایندگی</li>
+            </a>
+
+            <a href="">
+                <li><i class="fa-solid fa-calculator"></i>راس گیری</li>
+            </a>
+
+            <a href="./setting.html">
+                <li><i class="fa-solid fa-gear"></i>تنظیمات</li>
+            </a>
+            <a href="./connect.html">
+                <li><i class="fa-solid fa-phone"></i>ارتباط با ما</li>
+            </a>
+            <a href="./about.html">
+                <li><i class="fa-solid fa-info"></i>درباره</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="ltr">
+        <label class="themebtn" for="ChangeTheme">
+            <input class="ChangeTheme" type="checkbox" id="ChangeTheme" style="display: none;"/>
+            <i class="fa-solid fa-moon" style="position: relative; right: 4px; color: var(--borders);"></i>
+        </label>
+    </div>
+    
+    <script src="js/theme.js"></script>
+
+    <script src="js/All.js"></script>
+    <script src="js/visitor-panel.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/get-visit.js"></script>
+    <script src="js/xlsx.full.min.js"></script>
+</body>
+
+</html>

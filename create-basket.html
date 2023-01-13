@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl"  data="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/SHI_LERA GROP.png" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
+    <link rel="stylesheet" href="css/add-compani.css">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>TAHLIL | ایجاد سبد</title>
+</head>
+
+<body>
+    <button type="button" class="close-menu" id="menuClose"></button>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <i class="fa-solid fa-bars ms-3" id="addMenu"></i>
+
+
+
+                <div class="" style="cursor: pointer;" id="annonce-class">
+
+                    <span class="badge" id="orenge">2</span>
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <section class="attention-container dispaynoun" id="attention">
+                        <a href=""><span>2</span> اعلان دارید</a>
+                        <a href=""><i class="fa fa-envelope mx-2"></i> 9 پیام جدید </a>
+                        <a href=""><i class="fas fa-file mx-2"></i> 5 گزارش جدید </a>
+                    </section>
+
+                </div>
+
+
+
+                <div class="me-2" style="cursor: pointer;" id="comments-class">
+
+                    <span class="badge" id="red">9</span>
+
+                    <i class="fa-regular fa-comments "></i>
+
+
+                    <section class="comments-container dispaynoun" id="allmsg">
+                        <a href=""><span>9</span> پیام دارید</a>
+
+
+                        <div class="msg">
+                            <img src="img/Iranavandfar.jpg" alt="user-avatar" class="img mx-2 mt-3">
+                            <div class="media-body">
+                                <h3>محمد غزالی</h3>
+                                <p class="msg-text">اقای فلانی چرا چکش ...</p>
+                                <p class="msg-time"><i class="far fa-clock mr-1"></i> 5 دقیقه پیش</p>
+                            </div>
+                        </div>
+
+                        <div class="msg">
+                            <img src="img/Iranavandfar.jpg" alt="user-avatar" class="img mx-2 mt-3">
+                            <div class="media-body">
+                                <h3>محمد غزالی</h3>
+                                <p class="msg-text">اقای فلانی چرا چکش ...</p>
+                                <p class="msg-time"><i class="far fa-clock mr-1"></i> 5 دقیقه پیش</p>
+                            </div>
+                        </div>
+
+                        <div class="msg">
+                            <img src="img/Iranavandfar.jpg" alt="user-avatar" class="img mx-2 mt-3">
+                            <div class="media-body">
+                                <h3>محمد غزالی</h3>
+                                <p class="msg-text">اقای فلانی چرا چکش ...</p>
+                                <p class="msg-time"><i class="far fa-clock mr-1"></i> 1 روز پیش</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+            </div>
+
+            
+
+
+
+            <div class="navbar-container">
+                <img src="img/SHI_LERA GROP.png" alt="LOGO">
+            </div>
+        </nav>
+    </header>
+
+    <div class="link-list d-flex flex-column justify-content-between p-3 margin-auto m-2" >
+        <div style="color: rgb(96, 179, 137); "> <a href="./visitor-panel.html" style="text-decoration: none;">خانه</a> <b> / </b> <span>ایجاد سبد</span></div>
+        <span class="" style="color: var(--color-FFFFFF); font-size: 25px; margin-top: 8px;">ایجاد سبد</span>
+    </div>
+
+    <main>
+
+        <section class="line-flex" style="width: 300px;">
+            <input class="Enter mx-3" type="button" value="افزودن با اکسل">
+            <input class="Enter mx-2" type="button" value="سبد ها" id="show-baskets">
+        </section>
+
+        <section class="add-basket">
+            <div class="new-company">
+                <p class="Newitem">ایجاد سبد</p>
+                <br>
+                <select id="company-name" class="item-filter">
+                    <option value="">---نام شرکت---</option>
+                    <option value="Avandfar">عزیزی</option>
+                    <option value="Clatos">کلاتوس</option>
+                    <option value="Ariiana">آرییانا</option>
+                    <option value="Shilra">شیلرا</option>
+                </select>
+                <input id="product-name" class="input item-data" type="text" placeholder="نام  کالا">
+                <input id="product-desc" class="input item-data" type="text" placeholder="شرح کالا">
+                <input id="product-code" class="input item-data" type="text" placeholder="کد کالا">
+                <input id="product-count" class="input item-data" type="text" placeholder="تعداد کالا">
+                <input id="product-price" class="input item-data" type="text" placeholder="قیمت کالا(ریال)">
+                <input id="product-totalprice" class="input item-data" type="text" placeholder="قیمت کل سبد(ریال)">
+                <select id="gift-name" class="item-filter">
+                    <option value="">---هدیه در صورت خرید سبد---</option>
+                    <option value="ansolin">پک ده تایی انسولین</option>
+                    <option value="pomad">پوماد ضد افتاب صد تایی</option>
+                    <option value="bandazh">بانداژ سوختگی</option>
+                    <option value="sorang">سرنگ 10 cc</option>
+                    <option value=""></option>
+                </select>
+
+                <input id="gift-count" class="input item-data" type="text" placeholder="تعداد هدیه">
+                <input id="product-discount" class="input item-data" type="text"
+                    placeholder="تخفیف در صورت خرید سبد(ریال)">
+
+                <div class="line-flex">
+                    <button class="Enter submit" id="addProduct" type="submit">افزودن کالا</button>
+                    <button class="Enter submit" id="saveBasket" type="submit">ذخیره سبد</button>
+                </div>
+            </div>
+            <div class="table">
+                <table id="tblData" class="table-bordered border-dark table-striped align-middle text-center">
+                    <thead class="thead">
+                        <tr class="tr">
+                            <th class="th">ردیف</th>
+                            <th class="th">نام شرکت</th>
+                            <th class="th">نام کالا</th>
+                            <th class="th">شرح کالا</th>
+                            <th class="th">کد کالا</th>
+                            <th class="th">تعداد کالا</th>
+                            <th class="th">مبلغ واحد</th>
+                            <th class="th">مبلغ کل</th>
+                            <th class="th">نام هدیه</th>
+                            <th class="th">تعداد هدیه</th>
+                            <th class="th">تخفیف</th>
+                            <th class="th">مبلغ کل با تخفیف</th>
+                            <th class="th">حذف</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody class="tbody" id="tbody"></tbody>
+    
+                </table>
+            </div>
+
+        </section>
+
+
+
+        <section class="scroll" id="ALLBASKETS" style="display: none;">
+            
+            <button class="Enter mx-3" style="width: 70px; background: red;" id="closebasket">بستن</button>
+
+            <section>
+
+                <div class="baskets margin-auto">
+                    <p class="m-3" style="font-size: 16px; ">قیمت سبد</p>
+                    <p class="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, exercitationem. Eius sed laboriosam laudantium tempore unde aperiam similique laborum voluptas reprehenderit cumque! Officia dolores ratione quod quibusdam esse, tenetur quae?</p>
+                    <div class="d-flex flex-row">
+                        <button class="Enter mx-3" style="width: 70px; background: green;" id="closebasket">ویرایش</button>
+                        <button class="Enter mx-3" style="width: 70px; background: red;" id="closebasket">حذف</button>
+                    </div>
+                </div>
+
+                <div class="baskets margin-auto">
+                    <p class="m-3" style="font-size: 16px; ">قیمت سبد</p>
+                    <p class="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, exercitationem. Eius sed laboriosam laudantium tempore unde aperiam similique laborum voluptas reprehenderit cumque! Officia dolores ratione quod quibusdam esse, tenetur quae?</p>
+                    <div class="d-flex flex-row">
+                        <button class="Enter mx-3" style="width: 70px; background: green;" id="closebasket">ویرایش</button>
+                        <button class="Enter mx-3" style="width: 70px; background: red;" id="closebasket">حذف</button>
+                    </div>
+                </div>
+
+                <div class="baskets margin-auto">
+                    <p class="m-3" style="font-size: 16px; ">قیمت سبد</p>
+                    <p class="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, exercitationem. Eius sed laboriosam laudantium tempore unde aperiam similique laborum voluptas reprehenderit cumque! Officia dolores ratione quod quibusdam esse, tenetur quae?</p>
+                    <div class="d-flex flex-row">
+                        <button class="Enter mx-3" style="width: 70px; background: green;" id="closebasket">ویرایش</button>
+                        <button class="Enter mx-3" style="width: 70px; background: red;" id="closebasket">حذف</button>
+                    </div>
+                </div>
+
+                <div class="baskets margin-auto">
+                    <p class="m-3" style="font-size: 16px; ">قیمت سبد</p>
+                    <p class="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, exercitationem. Eius sed laboriosam laudantium tempore unde aperiam similique laborum voluptas reprehenderit cumque! Officia dolores ratione quod quibusdam esse, tenetur quae?</p>
+                    <div class="d-flex flex-row">
+                        <button class="Enter mx-3" style="width: 70px; background: green;" id="closebasket">ویرایش</button>
+                        <button class="Enter mx-3" style="width: 70px; background: red;" id="closebasket">حذف</button>
+                    </div>
+                </div>
+
+                <div class="baskets margin-auto">
+                    <p class="m-3" style="font-size: 16px; ">قیمت سبد</p>
+                    <p class="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, exercitationem. Eius sed laboriosam laudantium tempore unde aperiam similique laborum voluptas reprehenderit cumque! Officia dolores ratione quod quibusdam esse, tenetur quae?</p>
+                    <div class="d-flex flex-row">
+                        <button class="Enter mx-3" style="width: 70px; background: green;" id="closebasket">ویرایش</button>
+                        <button class="Enter mx-3" style="width: 70px; background: red;" id="closebasket">حذف</button>
+                    </div>
+                </div>
+
+               
+            </section>
+
+
+        </section>
+
+
+
+
+    </main>
+
+    <div class="hamburger-menu ltr" id="menu">
+        <div class="rtl">
+            <div class="line-flex justify-content-around p-3">
+                <img src="img/SHI_LERA GROP.png" alt="user-img" style="border-radius: 50%;" width="40px" height="40px">
+                <span style="color: #FFFFFF">مهدی صیادی</span>
+            </div>
+
+            <div class="items" id="ITEMS-CONTAINER3" style=" border-bottom:solid gray 1px;">
+                <div class="line-flex">
+                    <div>شرکت ها</div><i class="fa-solid fa-chevron-left rorate3" id="rotate3"></i>
+                </div>
+
+                <div class="DropDownMenu DropDownMenu-close3 " id="ITEMS-SHOW3">
+
+                    <a href="./visitor-panel.html">
+                        <li class="selling-item">عزیزی</li>
+                    </a>
+
+                    <a href="#">
+                        <li class="selling-item">کلاتوس</li>
+                    </a>
+                    <a href="#">
+                        <li class="selling-item">آرییانا</li>
+                    </a>
+
+                    <a href="#">
+                        <li class="selling-item">شیلرا</li>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+        <ul class="rtl">
+            <a href="./visitor-panel.html">
+                <li><i class="fa-solid fa-home"></i>پنل کاربری</li>
+            </a>
+            <a href="./add-compani.html">
+                <li><i class="fa-solid fa-plus"></i>افزودن فروشگاه</li>
+            </a>
+            <a href="./compani-visits.html">
+                <li><i class="fa-solid fa-list-check"></i>ویزیت ها</li>
+            </a>
+
+
+            <div class="items " id="ITEMS-CONTAINER">
+                <div class="line-flex">
+                    <div><i class="fa-solid fa-box rtl"></i>کالاها</div><i class="fa-solid fa-chevron-left rorate"
+                        id="rotate"></i>
+                </div>
+                <div class="DropDownMenu DropDownMenu-close " id="ITEMS-SHOW">
+                    <a href="./create-basket.html">
+                        <li class="selling-item"><i class="fa-solid fa-basket-shopping"></i>سبد</li>
+                    </a>
+                    <a href="./add-item.html">
+                        <li class="selling-item"><i class="fa-solid fa-plus-square"></i>کالا</li>
+                    </a>
+                    <a href="anbar">
+                        <li class="selling-item"><i class="fa-solid fa-list-check"></i>انبار</li>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="items" id="ITEMS-CONTAINER2">
+                <div class="line-flex">
+                    <div><i class="fa-solid fa-user rtl"></i>کارکنان</div><i class="fa-solid fa-chevron-left rorate2"
+                        id="rotate2"></i>
+                </div>
+                <div class="DropDownMenu DropDownMenu-close2 " id="ITEMS-SHOW2">
+                    <a href="sell-admin">
+                        <li class="selling-item"><i class="fa-solid fa-user-circle"></i>سرپرست فروش</li>
+                    </a>
+                    <a href="visit">
+                        <li class="selling-item"><i class="fa-solid fa-user-circle"></i>ویزیتور</li>
+                    </a>
+                    <a href="tahsildar">
+                        <li class="selling-item"><i class="fa-solid fa-user-circle"></i>تحصیلدار</li>
+                    </a>
+                </div>
+            </div>
+
+            <a href="./namayandegi.html">
+                <li><i class="fa-solid fa-home-user"></i>نمایندگی</li>
+            </a>
+
+            <a href="">
+                <li><i class="fa-solid fa-calculator"></i>راس گیری</li>
+            </a>
+
+            <a href="./setting.html">
+                <li><i class="fa-solid fa-gear"></i>تنظیمات</li>
+            </a>
+            <a href="./connect.html">
+                <li><i class="fa-solid fa-phone"></i>ارتباط با ما</li>
+            </a>
+            <a href="./about.html">
+                <li><i class="fa-solid fa-info"></i>درباره</li>
+            </a>
+        </ul>
+    </div>
+    <div class="ltr">
+        <label class="themebtn" for="ChangeTheme">
+            <input class="ChangeTheme" type="checkbox" id="ChangeTheme" style="display: none;" />
+            <i class="fa-solid fa-moon" style="position: relative; right: 4px; color: var(--borders);"></i>
+        </label>
+    </div>
+    <script src="js/theme.js"></script>
+    <script src="js/All.js"></script>
+    <script src="js/visitor-panel.js"></script>
+    <script src="js/create-basket.js"></script>
+</body>
+
+</html>

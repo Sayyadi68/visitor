@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl"  data="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/SHI_LERA GROP.png" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/jalalidatepicker.min.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
+    <link rel="stylesheet" href="css/compani-visits.css">
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <title>TAHLIL | عزیزی</title>
+</head>
+
+<body >
+    <button type="button" class="close-menu" id="menuClose"></button>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <i class="fa-solid fa-bars ms-3" id="addMenu"></i>
+
+
+
+                <div class="" style="cursor: pointer;" id="annonce-class">
+
+                    <span class="badge" id="orenge">2</span>
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <section class="attention-container dispaynoun" id="attention">
+                        <a href=""><span>2</span> اعلان دارید</a>
+                        <a href=""><i class="fa fa-envelope mx-2"></i> 9 پیام جدید </a>
+                        <a href=""><i class="fas fa-file mx-2"></i> 5 گزارش جدید </a>
+                    </section>
+
+                </div>
+
+
+
+                <div class="me-2" style="cursor: pointer;" id="comments-class">
+
+                    <span class="badge" id="red">9</span>
+
+                    <i class="fa-regular fa-comments "></i>
+
+
+                    <section class="comments-container dispaynoun" id="allmsg">
+                        <a href=""><span>9</span> پیام دارید</a>
+
+
+                        <div class="msg">
+                            <img src="img/Iranavandfar.jpg" alt="user-avatar" class="img mx-2 mt-3">
+                            <div class="media-body">
+                                <h3>محمد غزالی</h3>
+                                <p class="msg-text">اقای فلانی چرا چکش ...</p>
+                                <p class="msg-time"><i class="far fa-clock mr-1"></i> 5 دقیقه پیش</p>
+                            </div>
+                        </div>
+
+                        <div class="msg">
+                            <img src="img/Iranavandfar.jpg" alt="user-avatar" class="img mx-2 mt-3">
+                            <div class="media-body">
+                                <h3>محمد غزالی</h3>
+                                <p class="msg-text">اقای فلانی چرا چکش ...</p>
+                                <p class="msg-time"><i class="far fa-clock mr-1"></i> 5 دقیقه پیش</p>
+                            </div>
+                        </div>
+
+                        <div class="msg">
+                            <img src="img/Iranavandfar.jpg" alt="user-avatar" class="img mx-2 mt-3">
+                            <div class="media-body">
+                                <h3>محمد غزالی</h3>
+                                <p class="msg-text">اقای فلانی چرا چکش ...</p>
+                                <p class="msg-time"><i class="far fa-clock mr-1"></i> 1 روز پیش</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+              
+            </div>
+
+            
+
+            <div class="navbar-container">
+                <img src="img/SHI_LERA GROP.png" alt="LOGO">
+            </div>
+        </nav>
+    </header>
+
+    <div class="link-list d-flex flex-column justify-content-between p-3 margin-auto m-2" >
+        <div style="color: rgb(96, 179, 137); "> <a href="./visitor-panel.html" style="text-decoration: none;">خانه</a> <b> / </b> <span>ویزیت ها</span></div>
+        <span class="" style="color: var(--color-FFFFFF); font-size: 25px; margin-top: 8px;">ویزیت ها</span>
+    </div>
+
+        
+        <div class="line-under">
+            
+            <div class="d-flex flex-wrap align-items-center m-3 ">
+                <button type="button" class="Enter creat-factor " id="Create">سفارش گیری</button>
+                <button type="button" class="Enter creat-factor " id="Create">خروجی اکسل</button>
+            </div>
+
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 d-flex flex-wrap align-items-center justify-content-start text-center my-2">
+                        <select class="item-filter " id="buyer-code-filter">
+                            <option value="" disabled selected>-- انتخاب مشتری --</option>
+                            <option value="100222">داروخانه شماره 1</option>
+                            <option value="100333">داروخانه شماره 2</option>
+                            <option value="100444">داروخانه شماره 3</option>
+                            <option value="100555">داروخانه شماره 4</option>
+                            <option value="100666">داروخانه شماره 5</option>
+                            <option value="100777">داروخانه شماره 6</option>
+                            <option value="100888">داروخانه شماره 7</option>
+                            <option value="100999">داروخانه شماره 8</option>
+                            <option value="200111">داروخانه شماره 9</option>
+                            <option value="200222">داروخانه شماره 10</option>
+                        </select>
+                        <input class="ms-2 my-2 " id="buyer-code" type="text" disabled value="">
+                        <input class="ms-2 my-2" id="buyer-name" type="text" disabled value="">
+                    </div>
+                </div>
+            </section>
+            <section class="container-fluid mt-2">
+                <div class="row">
+                    <div class="add-filter d-flex flex-wrap align-items-center">
+                        <select class="filters item-filter mt-3" id="factor-filter">
+                            <option value="0" disabled selected>-- افزودن فیلتر--</option>
+                            <option id="op1" value="1">تسویه</option>
+                            <option id="op2" value="2">فاکتور باز</option>
+                            <option id="op4" value="4">برگشت از توضیع</option>
+                            <option id="op5" value="5">مرجوعی</option>
+                            <option id="op6" value="6">فروش سال قبل</option>
+                            <option id="op7" value="7">فروش امسال</option>
+                        </select>
+                        <div class="mx-3 row-cols-1">
+                            <div>
+                                <i>از</i><input data-jdp class="border-outline mx-1" id="date" placeholder="روز/ماه/سال"
+                                    style="cursor: pointer;">
+                            </div>
+                            <div>
+                                <i>تا</i><input data-jdp class="border-outline mx-1" id="date" placeholder="روز/ماه/سال"
+                                    style="cursor: pointer;">
+                            </div>
+                        </div>
+                        <button type="button" class="Enter set-filter ">اعمال فیلتر</button>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="container-fluid mt-2">
+                <div class="row">
+                    <div class="filters d-flex mx-100 flex-wrap">
+                        <span id="over" class="ms-2 mt-3 over hide1"><i class="fa-solid fa-multiply"></i>تسویه</span>
+                        <span id="open" class="ms-2 mt-3 open hide2"><i class="fa-solid fa-multiply"></i>فاکتور باز</span>
+                        <span id="dont-need" class="ms-2 mt-3 dont-need hide4"><i class="fa-solid fa-multiply"></i>برگشت از توضیع</span>
+                        <span id="backed" class="ms-2 mt-3 backed hide5"><i class="fa-solid fa-multiply"></i>مرجوعی</span>
+                        <span id="LastYear" class="ms-2 mt-3 last-year hide6"><i class="fa-solid fa-multiply"></i>فروش سال قبل</span>
+                        <span id="ThisYear" class="ms-2 mt-3 this-year hide7"><i class="fa-solid fa-multiply"></i>فروش امسال</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <section>
+            <div class="compani-visit">
+                <table>
+                    <thead class="thead">
+                        <tr class="tr">
+                            <th class="th"></th>
+                            <th class="th left-border">ردیف</th>
+                            <th class="th">نام شرکت</th>
+                            <th class="th">نام فروشگاه</th>
+                            <th class="th">وضعیت</th>
+                            <th class="th">نوع سند</th>
+                            <th class="th">تاریخ</th>
+                            <th class="th">بدهکاری</th>
+                            <th class="th">بستانکاری</th>
+                            <th class="th">شماره</th>
+                            <th class="th">سر رسید</th>
+                            <th class="th">مانده فاکتور</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="tr">
+                            <td class="th left-border"><input type="checkbox" name="owe" id=""></td>
+                            <td class="th left-border">1</td>
+                            <td class="th">عزیزی</td>
+                            <td class="th">داروخانه شماره 2</td>
+                            <td class="th"><i class="pay-mod-over">تسویه</i></td>
+                            <td class="th">فروش امسال</td>
+                            <td class="th">1401/05/12</td>
+                            <td class="th">34</td>
+                            <td class="th">1000000</td>
+                            <td class="th"></td>
+                            <td class="th">1402/05/10</td>
+                            <td class="th">3090</td>
+                        </tr>
+
+
+                        <tr class="tr">
+                            <td class="th left-border"><input type="checkbox" name="owe" id=""></td>
+                            <td class="th left-border">2</td>
+                            <td class="th">عزیزی</td>
+                            <td class="th">داروخانه شماره 10</td>
+                            <td class="th"><i class="pay-mod-open">فاکتور باز</i></td>
+                            <td class="th">فروش سال قبل</td>
+                            <td class="th">1400/12/08</td>
+                            <td class="th">52</td>
+                            <td class="th">56</td>
+                            <td class="th"></td>
+                            <td class="th">1401/03/08</td>
+                            <td class="th">37000</td>
+                        </tr>
+
+
+                        <tr class="tr">
+                            <td class="th left-border"><input type="checkbox" name="owe" id=""></td>
+                            <td class="th left-border">3</td>
+                            <td class="th">عزیزی</td>
+                            <td class="th">داروخانه شماره 2</td>
+                            <td class="th"><i class="pay-mod-back">مرجوعی</i></td>
+                            <td class="th">فروش امسال</td>
+                            <td class="th">1401/05/12</td>
+                            <td class="th">34</td>
+                            <td class="th">1000000</td>
+                            <td class="th"></td>
+                            <td class="th">1402/05/10</td>
+                            <td class="th">3090</td>
+                        </tr>
+
+
+                        <tr class="tr">
+                            <td class="th left-border"><input type="checkbox" name="owe" id=""></td>
+                            <td class="th left-border">4</td>
+                            <td class="th">عزیزی</td>
+                            <td class="th">داروخانه شماره 10</td>
+                            <td class="th"><i class="pay-mod-open">فاکتور باز</i></td>
+                            <td class="th">فروش سال قبل</td>
+                            <td class="th">1400/12/08</td>
+                            <td class="th">52</td>
+                            <td class="th">56</td>
+                            <td class="th"></td>
+                            <td class="th">1401/03/08</td>
+                            <td class="th">37000</td>
+                        </tr>
+
+
+                        <tr class="tr">
+                            <td class="th left-border"><input type="checkbox" name="owe" id=""></td>
+                            <td class="th left-border">5</td>
+                            <td class="th">عزیزی</td>
+                            <td class="th">داروخانه شماره 2</td>
+                            <td class="th"><i class="pay-mod-over">تسویه</i></td>
+                            <td class="th">فروش امسال</td>
+                            <td class="th">1401/05/12</td>
+                            <td class="th">34</td>
+                            <td class="th">1000000</td>
+                            <td class="th"></td>
+                            <td class="th">1402/05/10</td>
+                            <td class="th">3090</td>
+                        </tr>
+                        
+
+                        <tr class="tr">
+                            <td class="th left-border"><input type="checkbox" name="owe" id=""></td>
+                            <td class="th left-border">6</td>
+                            <td class="th">عزیزی</td>
+                            <td class="th">داروخانه شماره 2</td>
+                            <td class="th"><i class="pay-mod-back">مرجوعی</i></td>
+                            <td class="th">فروش امسال</td>
+                            <td class="th">1401/05/12</td>
+                            <td class="th">34</td>
+                            <td class="th">1000000</td>
+                            <td class="th"></td>
+                            <td class="th">1402/05/10</td>
+                            <td class="th">3090</td>
+                        </tr>
+
+
+
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div>
+            <table class="mb-4">
+                <thead class="thead">
+                    <tr class="tr">
+                        <th class="th left-border"> بدهکاری <i id="payed" style="color:rgb(43, 255, 0);">--</i></th>
+                        <th class="th left-border"> بستانکاری <i id="get-cash" style="color: rgb(255, 238, 0);">--</i></th>
+                        <th class="th left-border"> مانده فاکتور <i id="remeinde" style="color: rgb(18, 31, 211);">--</i></th>
+                        <th class="th"> راس <i id="root" style="color: rgb(255, 0, 0);">--</i></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="hamburger-menu ltr" id="menu">
+            <div class="rtl">
+                <div class="line-flex justify-content-around p-3">
+                    <img src="img/SHI_LERA GROP.png" alt="user-img" style="border-radius: 50%;" width="40px" height="40px">
+                    <span style="color: #FFFFFF">مهدی صیادی</span>
+                </div>
+    
+                <div class="items" id="ITEMS-CONTAINER3" style=" border-bottom:solid gray 1px;">
+                    <div class="line-flex">
+                        <div>شرکت ها</div><i class="fa-solid fa-chevron-left rorate3"id="rotate3"></i>
+                    </div>
+    
+                    <div class="DropDownMenu DropDownMenu-close3 " id="ITEMS-SHOW3">
+    
+                        <a href="./visitor-panel.html">
+                            <li class="selling-item">عزیزی</li>
+                        </a>
+                        
+                        <a href="#">
+                            <li class="selling-item">کلاتوس</li>
+                        </a>
+                        <a href="#">
+                            <li class="selling-item">آرییانا</li>
+                        </a>
+    
+                        <a href="#">
+                            <li class="selling-item">شیلرا</li>
+                        </a>
+                        
+                    </div>
+    
+                </div>
+            </div>
+            <ul class="rtl">
+                <a href="./visitor-panel.html">
+                    <li><i class="fa-solid fa-home"></i>پنل کاربری</li>
+                </a>
+                <a href="./add-compani.html">
+                    <li><i class="fa-solid fa-plus"></i>افزودن فروشگاه</li>
+                </a>
+                <a href="./compani-visits.html">
+                    <li><i class="fa-solid fa-list-check"></i>ویزیت ها</li>
+                </a>
+    
+                
+                <div class="items " id="ITEMS-CONTAINER">
+                    <div class="line-flex">
+                        <div><i class="fa-solid fa-box rtl"></i>کالاها</div><i class="fa-solid fa-chevron-left rorate" id="rotate"></i>
+                    </div>
+                    <div class="DropDownMenu DropDownMenu-close " id="ITEMS-SHOW">
+                        <a href="./create-basket.html">
+                            <li class="selling-item"><i class="fa-solid fa-basket-shopping"></i>سبد</li>
+                        </a>
+                        <a href="./add-item.html">
+                            <li class="selling-item"><i class="fa-solid fa-plus-square"></i>کالا</li>
+                        </a>
+                        <a href="anbar">
+                            <li class="selling-item"><i class="fa-solid fa-list-check"></i>انبار</li>
+                        </a>
+                    </div>
+                </div>
+    
+    
+    
+                <div class="items" id="ITEMS-CONTAINER2">
+                    <div class="line-flex">
+                        <div><i class="fa-solid fa-user rtl"></i>کارکنان</div><i class="fa-solid fa-chevron-left rorate2" id="rotate2"></i>
+                    </div>
+                    <div class="DropDownMenu DropDownMenu-close2 " id="ITEMS-SHOW2">
+                        <a href="sell-admin">
+                            <li class="selling-item"><i class="fa-solid fa-user-circle"></i>سرپرست فروش</li>
+                        </a>
+                        <a href="visit">
+                            <li class="selling-item"><i class="fa-solid fa-user-circle"></i>ویزیتور</li>
+                        </a>
+                        <a href="tahsildar">
+                            <li class="selling-item"><i class="fa-solid fa-user-circle"></i>تحصیلدار</li>
+                        </a>
+                    </div>
+                </div>
+    
+                <a href="./namayandegi.html">
+                    <li><i class="fa-solid fa-home-user"></i>نمایندگی</li>
+                </a>
+    
+                <a href="">
+                    <li><i class="fa-solid fa-calculator"></i>راس گیری</li>
+                </a>
+    
+                <a href="./setting.html">
+                    <li><i class="fa-solid fa-gear"></i>تنظیمات</li>
+                </a>
+                <a href="./connect.html">
+                    <li><i class="fa-solid fa-phone"></i>ارتباط با ما</li>
+                </a>
+                <a href="./about.html">
+                    <li><i class="fa-solid fa-info"></i>درباره</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="ltr">
+            <label class="themebtn" for="ChangeTheme">
+                <input class="ChangeTheme" type="checkbox" id="ChangeTheme" style="display: none;"/>
+                <i class="fa-solid fa-moon" style="position: relative; right: 4px; color: var(--borders);"></i>
+            </label>
+        </div>
+        <script src="js/theme.js"></script>
+
+    <script src="js/All.js"></script>
+    <script src="js/visitor-panel.js"></script>
+    <script src="js/company-visits.js"></script>
+    <script src="js/jalalidatepicker.min.js"></script>
+    <script>jalaliDatepicker.startWatch();</script>
+</body>
+
+</html>
